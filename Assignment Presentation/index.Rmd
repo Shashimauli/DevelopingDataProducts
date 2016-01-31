@@ -46,7 +46,7 @@ In the application the user is to enter the following:
 
 5. Level of significane: This is the level at which we wish to compare the proportions of the two populations. Often, researchers choose significance levels equal to 0.01, 0.05, or 0.10; but any value between 0 and 1 can be used.  
 
-
+All these values are being taken by the ui.r file and this file also gives the layout of the web page (user interface)
 
 --- .class #id   
 
@@ -61,14 +61,13 @@ pooled standard error(SE) = sqrt[p * (1-p) * ((1/n1) + (1/n2))]
   
 testStatistic = (p1-p2)/SE  
 
-
 Once we got the test statistic we calculate the p-value at this level. p-value is the probability that the z-score is less than -(testStatistic) or greater than (testStatistic).  
 
 We use the Normal Distribution Calculator to find  
-- P(z < -testStatistic) = a1 (say),  
-- and P(z > testStatistic) = a2 (say).  
-- Thus, the p-value = a1 + a2 = a (say).  
+- P(z < -testStatistic) = a1 (say), and P(z > testStatistic) = a2 (say).  
+- Thus, the p-value = a1 + a2 = a (say). 
 
+All these computations are being done by the server.r file. This file controls what the application is going to perform.
 
 --- .class #id 
 
